@@ -9,11 +9,14 @@ $settings = require __DIR__ . '/../config/settings.php';
 
 $dependencies = require __DIR__ . '/../config/dependencies.php';
 $routes = require __DIR__ . '/../config/routes.php';
+$apiDados = require __DIR__ . '/../app/service/apiDadosService.php';
+
 
 $app = AppCreator::createApp(
     $settings,
     $dependencies,
-    $routes
+    $routes,
+    $apiDados
 );
 
 $app->run();
